@@ -37,8 +37,8 @@ The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platfor
 > **Current Phase:** Mechanical Build & Manual Control Setup
 
 - ✅ Modify base wagon and install axle/motor system  
-- ✅ Integrate motor and servo components  
-- ✅ Mount 3D LiDAR and depth camera  
+- ✅🔄 Integrate motor and servo components  
+- 🔄 Mount 3D LiDAR and depth camera  
 - 🔄 Building housing and electronics mount  
 - ⏭️ Next: Manual control + joystick setup  
 - 🧪 Upcoming: SLAM data collection and initial autonomy tests
