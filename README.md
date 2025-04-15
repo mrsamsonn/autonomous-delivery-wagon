@@ -2,6 +2,12 @@
 
 A sidewalk-friendly autonomous delivery robot designed for scalable last-mile logistics.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <p style="font-size: 0.9em; color: gray;"><i>Note: A lot has changed since this design — update coming soon!</i></p>
+</div>
+
+
 ## 🛠️ Project Overview
 
 The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platform, based on a **modified garden wagon chassis**, and tailored for real-world delivery applications. Designed with affordability, modularity, and functionality in mind, ADW is engineered to carry up to **600 lbs** while navigating sidewalks and varied terrains autonomously.
