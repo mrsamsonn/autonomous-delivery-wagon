@@ -56,7 +56,16 @@ The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platfor
 
 </div>
 
+<div align="center">
 
+### 🛞 status as of 04/15/25
+
+<img src="https://github.com/user-attachments/assets/fd757812-911e-4f8b-9586-a58fbf3eb619" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/3ded7747-cda9-48ec-ae2c-38e01035e94e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/7e5cdcd7-3e42-47d1-afb0-779342addc7d" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/56103127-4d8a-4e87-9d79-0a71c5460200" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+</div>
 
 Coming soon:
 - 📸 Build progress photos  
