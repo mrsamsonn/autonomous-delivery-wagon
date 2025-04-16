@@ -1,0 +1,2 @@
+unilidar_bridge:unilidar_sdk/unitree_lidar_ros/src/unitree_lidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jetson/catkin_ws/install -G Unix Makefiles
