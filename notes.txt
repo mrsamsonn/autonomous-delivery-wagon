@@ -1,3 +1,4 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>> ROS <<<<<<<<<<<<<<<<<<<<<<<<<<<
 Step 1: Install ROS Melodic
 
 Run each command one at a time:
@@ -146,3 +147,9 @@ sudo usermod -aG dialout $USER
 Then, log out and log back in, or reboot the system.
 -------------------------------------------------
 -------------------------------------------------
+
+>>>>>>>>>>>>>>>> Mono Camera [c920] <<<<<<<<<<<<<<<<<<<<<
+
+view: 
+gst-launch-1.0 v4l2src device=/dev/video0 ! image/jpeg, width=1920, height=1080, framerate=30/1 ! jpegdec ! videoconvert ! autovideosink
+
