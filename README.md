@@ -3,8 +3,9 @@
 A sidewalk-friendly autonomous delivery robot designed for scalable logistics.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <p style="font-size: 0.9em; color: gray;"><i>Note: A lot has changed since this design — update coming soon!</i></p>
 </div>
 
@@ -71,6 +72,14 @@ The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platfor
 <img src="https://github.com/user-attachments/assets/3ded7747-cda9-48ec-ae2c-38e01035e94e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/7e5cdcd7-3e42-47d1-afb0-779342addc7d" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/56103127-4d8a-4e87-9d79-0a71c5460200" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+</div>
+
+<div align="center">
+
+### 🛞 status as of 04/17/25
+
+<img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 
 </div>
 
