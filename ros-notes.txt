@@ -36,4 +36,110 @@ Add the workspace to your bash profile:
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
--------------------------------------------------------
+---------------------Unitree LiDAR 4D L1 Setup-------------------------
+Step 4: Clone the unilidar_sdk Repository
+
+Navigate to the src directory in your catkin_ws:
+
+cd ~/catkin_ws/src
+
+Clone the unilidar_sdk repository:
+
+git clone https://github.com/unitreerobotics/unilidar_sdk.git
+
+[make sure to do sudo rm -rf ~unilidar_sdk_ros2]
+
+Step 5: Install Dependencies
+
+Before we can build the package, make sure the necessary dependencies are installed:
+
+sudo apt update
+sudo apt install ros-melodic-pcl-ros libpcl-dev libyaml-cpp-dev
+
+Step 6: Build the Workspace
+
+Go back to the root of your catkin_ws and build everything:
+
+cd ~/catkin_ws
+catkin_make
+
+Source the setup file to set up the environment:
+
+source devel/setup.bash
+
+You can add source ~/catkin_ws/devel/setup.bash to your .bashrc to automatically source it every time.
+
+Step 7: Configure the LiDAR
+
+Next, we'll configure the unitree_lidar_ros package by specifying the correct port for the LiDAR:
+
+    Find the correct serial port where the LiDAR is connected:
+
+ls /dev/ttyUSB*
+
+This will return the serial device for your LiDAR, such as /dev/ttyUSB0 or similar.
+
+Modify the config.yaml file to specify the correct port. Open it using your editor (nano, vim, etc.):
+
+nano ~/catkin_ws/src/unilidar_sdk/unitree_lidar_ros/config/config.yaml
+
+[jetson@jetson-desktop:~/catkin_ws/src/unilidar_sdk/unitree_lidar_ros/src/unitree_lidar_ros/config$ nano config.yaml]
+
+Modify the port value to match your LiDAR's serial port:
+
+port: "/dev/ttyUSB0"  # Replace with your actual port
+
+Save and close the file.
+
+ Step 8: Run the Unitree LiDAR Driver
+
+You’re almost there! Now, you can launch the LiDAR driver:
+
+[reboot before launch]
+
+roslaunch unitree_lidar_ros run.launch
+
+----**If permission denied at launch**---
+1. Verify and Ensure Proper Permissions for the Serial Device
+
+    Identify your device:
+
+    Run the following command to check your serial device:
+
+ls /dev/ttyUSB*
+
+This will show something like /dev/ttyUSB0, /dev/ttyUSB1, etc.
+
+Check permissions:
+
+Verify the permissions on the identified serial device (/dev/ttyUSB0 or others):
+
+ls -l /dev/ttyUSB0
+
+The output should look like this:
+
+crw-rw---- 1 root dialout 188, 0 <timestamp> /dev/ttyUSB0
+
+If the device is not assigned to the dialout group or has incorrect permissions, run:
+
+    sudo chown root:dialout /dev/ttyUSB0
+    sudo chmod 660 /dev/ttyUSB0
+
+    After doing this, check again to make sure the serial port has the correct permissions.
+
+    Reboot the system:
+
+    If you made changes to the group or permissions, reboot your system to ensure the changes persist.
+
+2. Confirm the dialout Group is Applied
+
+Make sure that your user is still part of the dialout group:
+
+groups jetson
+
+This should list dialout as one of the groups. If it's not listed, add your user to the group again:
+
+sudo usermod -aG dialout $USER
+
+Then, log out and log back in, or reboot the system.
+----
