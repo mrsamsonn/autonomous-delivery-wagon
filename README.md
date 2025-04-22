@@ -3,10 +3,10 @@
 A sidewalk-friendly autonomous delivery robot designed for scalable logistics.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-  <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-  <img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-  <img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <p style="font-size: 0.9em; color: gray;"><i>Note: A lot has changed since this design — update coming soon!</i></p>
 </div>
 
