@@ -97,8 +97,10 @@ You’re almost there! Now, you can launch the LiDAR driver:
 
 [reboot before launch]
 
-roslaunch unitree_lidar_ros run.launch
+[imu error fix] You can change the Fixed Frame to the imu frame unilidar_imu, so that you can view the IMU quaternion vector:
 
+roslaunch unitree_lidar_ros run.launch
+---------------------------------------------
 ----**If permission denied at launch**---
 1. Verify and Ensure Proper Permissions for the Serial Device
 
@@ -142,4 +144,5 @@ This should list dialout as one of the groups. If it's not listed, add your user
 sudo usermod -aG dialout $USER
 
 Then, log out and log back in, or reboot the system.
-----
+-------------------------------------------------
+-------------------------------------------------
