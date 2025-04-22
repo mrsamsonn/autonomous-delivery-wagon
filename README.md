@@ -6,13 +6,15 @@ A sidewalk-friendly autonomous delivery robot designed for scalable logistics.
   <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <p style="font-size: 0.9em; color: gray;"><i>Note: A lot has changed since this design — update coming soon!</i></p>
 </div>
-
 
 ## 🛠️ Project Overview
 
 The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platform, based on a **modified garden wagon chassis**, and tailored for real-world delivery applications. Designed with affordability, modularity, and functionality in mind, ADW is engineered to carry up to **600 lbs** while navigating sidewalks and varied terrains autonomously.
+
+tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereats) by utilizing sidewalks
 
 ---
 
@@ -25,7 +27,7 @@ The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platfor
 
 - **Advanced Perception Stack**  
   - Mounted **3D LiDAR** with **360° horizontal** and **90° vertical FOV** for robust environmental awareness  
-  - **Depth camera** for object detection and tracking  
+  - **Mono camera** for object detection and tracking  
   - Real-time obstacle detection and path planning
 
 - **Compute & Autonomy**  
@@ -46,9 +48,9 @@ The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platfor
 
 - ✅ Modify base wagon and install axle/motor system  
 - ✅🔄 Integrate motor and servo components  
-- 🔄 Mount 3D LiDAR and depth camera  
-- 🔄 Building housing and electronics mount  
-- ⏭️ Next: Manual control + joystick setup  
+- ✅🔄 Mount 3D LiDAR and mono camera  
+- ✅🔄 Building housing and electronics mount  
+- ✅🔄 Manual control + joystick setup  
 - 🧪 Upcoming: SLAM data collection and initial autonomy tests
 
 ---
@@ -80,6 +82,7 @@ The **Autonomous Delivery Wagon (ADW)** is a heavy-duty autonomous robot platfor
 ### 🛞 status as of 04/17/25
 
 <img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 
 </div>
 
@@ -93,7 +96,7 @@ Coming soon:
 ## 📚 Tech Stack
 
 **Hardware:**  
-`Modified Wagon Frame` • `Custom Axle` • `350W Motor` • `3D LiDAR (360°x90°)` • `Depth Camera` • `Servo Steering`
+`Modified Wagon Frame` • `Custom Axle` • `350W Motor` • `3D LiDAR (360°x90°)` • `Mono Camera` • `Servo Steering`
 
 **Software & Compute:**  
 `NVIDIA Jetson Nano` • `ROS` • `SLAM` • `Python` • `C++`
@@ -102,7 +105,7 @@ Coming soon:
 
 ## 💡 Project Goal
 
-To create a low-cost, sidewalk-compatible autonomous delivery robot platform inspired by real-world AVs. Aimed at bridging the gap between hobby robotics and industrial logistics.
+To create a low-cost, sidewalk-compatible autonomous delivery robot platform inspired by real-world AVs. Aiming to utilize sidewalk infastracture for logistics (ie doordash, ubereats).
 
 ---
 
