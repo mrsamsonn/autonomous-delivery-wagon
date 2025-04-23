@@ -1,3 +1,51 @@
+>>>>>>>>>>>>>>Jetson Nano<<<<<<<<<<<<<<<<<<<<<<<<<
+--------------- enable pwm pin 32 33 -------------------
+Step 1: Enable PWM using busybox devmem
+
+Run these as root (sudo su or prefix with sudo):
+
+# Enable Pin 32 / PWM0
+busybox devmem 0x700031fc 32 0x45
+busybox devmem 0x6000d504 32 0x2
+
+# Enable Pin 33 / PWM2
+busybox devmem 0x70003248 32 0x46
+busybox devmem 0x6000d100 32 0x00
+
+Step 2: Control PWM via sysfs
+
+cd /sys/devices/7000a000.pwm/pwm/pwmchip0
+echo 0 > export  # For PWM0 (Pin 32) — use 2 for PWM2 (Pin 33)
+cd pwm0
+echo 20000000 > period        # 20ms period (50Hz)
+echo 1500000 > duty_cycle     # 1.5ms pulse width (7.5% duty cycle)
+echo 1 > enable
+
+Step 3: Make Persistent with Crontab
+
+To avoid running these commands manually after each reboot:
+
+sudo crontab -e
+
+Then add at the bottom:
+
+@reboot sleep 10 && busybox devmem 0x700031fc 32 0x45 && busybox devmem 0x6000d504 32 0x2
+@reboot sleep 10 && busybox devmem 0x70003248 32 0x46 && busybox devmem 0x6000d100 32 0x00
+
+This ensures the pins are reconfigured correctly ~10 seconds after boot.
+🧩 Optional: Add to Script
+
+(optional) shell script instead of crontab:
+
+#!/bin/bash
+# pwm_init.sh
+busybox devmem 0x700031fc 32 0x45
+busybox devmem 0x6000d504 32 0x2
+busybox devmem 0x70003248 32 0x46
+busybox devmem 0x6000d100 32 0x00
+
+Then place it in /etc/rc.local or systemd service if needed.
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>> ROS <<<<<<<<<<<<<<<<<<<<<<<<<<<
 Step 1: Install ROS Melodic
 
