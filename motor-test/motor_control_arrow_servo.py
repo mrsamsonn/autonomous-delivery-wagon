@@ -75,6 +75,8 @@ def main(stdscr):
             direction = "center"
 
         elif key == 27:  # ESC key
+            center_servo()
+            time.sleep(1)  # Let it move to center before disabling
             stop_servo()
             stdscr.addstr(1, 0, "Stopped        ")
             stdscr.refresh()
