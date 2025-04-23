@@ -1,4 +1,8 @@
 >>>>>>>>>>>>>>Jetson Nano<<<<<<<<<<<<<<<<<<<<<<<<<
+---------------vscode w/ python---------------------
+$ git clone https://github.com/JetsonHacksNano/installVSCode.git
+$ cd installVSCode
+./installVSCodeWithPython.sh
 --------------- enable pwm pin 32 33 -------------------
 Step 1: Enable PWM using busybox devmem
 
