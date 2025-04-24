@@ -200,6 +200,75 @@ Then, log out and log back in, or reboot the system.
 -------------------------------------------------
 -------------------------------------------------
 
+---------------------- Camera Node -------------------------
+✅ 1. Camera Node with Image Pipeline (C920 Mono Camera)
+
+Install and run the ROS camera node:
+
+sudo apt install ros-melodic-usb-cam
+******
+Make sure the ROS master is running:
+
+roscore
+
+Environment:
+Run these in each terminal before launching ROS nodes:
+
+source /opt/ros/melodic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+You can also add them to your .bashrc:
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+3. Check if the master URI is set
+
+Make sure ROS_MASTER_URI is pointing to the correct machine (usually localhost if everything is on Jetson Nano):
+
+export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
+
+********
+Then run:
+
+rosrun usb_cam usb_cam_node
+
+Check image stream:
+
+rqt_image_view
+
+Make sure the topic (usually /usb_cam/image_raw) is available.
+
+Init Camera Node Steps:
+1. If you're trying to stream the video into ROS (e.g., for a robot or CV pipeline):
+
+Make sure your roscore is running (that previous error said it wasn’t):
+
+roscore
+
+Then in a new terminal:
+
+rosrun usb_cam usb_cam_node
+
+And you can view the video with:
+
+rqt_image_view
+
+    If usb_cam is not installed, you can install it with:
+
+sudo apt install ros-melodic-usb-cam
+
+---------------------- LiDAR and Camera Fusion --------------------
+make sure roscore is running
+then do source ~/.bashrc
+rosrun and roslaunch camera and lidar
+rostopic echo /unilidar/cloud
+
+prereq:
+sudo apt install ros-melodic-cv-bridge ros-melodic-image-transport
+
 >>>>>>>>>>>>>>>> Mono Camera [c920] <<<<<<<<<<<<<<<<<<<<<
 
 view: 
