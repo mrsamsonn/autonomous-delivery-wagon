@@ -8,10 +8,18 @@ PWM0_PATH = os.path.join(PWM_BASE, "pwm0")  # Pin 32
 
 PERIOD_NS = 20000000  # 20ms = 50Hz
 
-# Pulse widths in nanoseconds
-LEFT_NS = 1000000
-CENTER_NS = 1500000
-RIGHT_NS = 2000000
+# Adjustable center pulse width (in nanoseconds)
+CENTER_NS = 1600000  # Default center (you can tweak this)
+
+# Range to stay away from hard limits (in microseconds)
+RANGE_US = 400  # Gives 1100–1900μs, safely away from 500–2500μs
+
+# Calculate left/right relative to center
+LEFT_NS  = CENTER_NS - (RANGE_US * 1000) // 2
+RIGHT_NS = CENTER_NS + (RANGE_US * 1000) // 2
+
+print(LEFT_NS)
+print(RIGHT_NS)
 
 # Setup PWM channel
 def export_pwm(channel):
