@@ -88,6 +88,14 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 
 <div align="center">
 
+### 🛞 status as of 04/25/25
+
+<img src="https://github.com/user-attachments/assets/a125ad9d-e70a-41b4-950b-f0db18e28c48" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+</div>
+
+<div align="center">
+
 ### 🛞 status as of 04/30/25 [steering mechanism void 🥲]
 
 <img src="https://github.com/user-attachments/assets/de53d2b0-0ec8-4076-bccc-81c74bc827a3" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
