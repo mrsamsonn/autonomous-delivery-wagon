@@ -6,7 +6,7 @@ A sidewalk-friendly autonomous delivery robot designed for scalable logistics.
   <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/a125ad9d-e70a-41b4-950b-f0db18e28c48" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-  <p style="font-size: 0.9em; color: gray;"><i>Note: Scroll down for journal logs 😊!</i></p>
+  <p><a href="#journal-log">📓 Scroll down for journal logs!</a></p>
 </div>
 
 ## 🛠️ Project Overview
@@ -53,8 +53,8 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 - 🧪 Upcoming: SLAM data collection and initial autonomy tests
 
 ---
-
-## 🖼️ Media Journal
+<a name="journal-log"></a>
+## Journal Log
 
 <div align="center">
 
