@@ -94,6 +94,8 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 <img src="https://github.com/user-attachments/assets/e0bf1dd3-6656-43e6-9261-c58087abfb40" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 
+</div>
+
 **Steering Mechanism Development Log**
 
 Currently facing challenges in designing and printing parts for a stable and precise steering mechanism.
@@ -109,11 +111,6 @@ Currently facing challenges in designing and printing parts for a stable and pre
 - **Current approach – Drag link steering**:  
   Mounting the servo to the fixed chassis and connecting it to the steering arm via a push-pull linkage (drag link).  
   - *Goal:* Achieve better mechanical control, increase range of motion, and keep the servo stationary for consistent torque application.
-
-</div>
-
-<div align="center">
-
 ---
 
 ## 📚 Tech Stack
