@@ -48,9 +48,9 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 
 - ✅ Modify base wagon and install axle/motor system  
 - ✅🔄 Integrate motor and servo components  
-- ✅🔄 Mount 3D LiDAR and mono camera  
-- ✅🔄 Building housing and electronics mount  
-- ✅🔄 Manual control + joystick setup  
+- ✅ Mount 3D LiDAR and mono camera  
+- ✅ Building housing and electronics mount  
+- ✅ Manual control setup  
 - 🧪 Upcoming: SLAM data collection and initial autonomy tests
 
 ---
