@@ -53,6 +53,23 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 - 🧪 Upcoming: SLAM data collection and initial autonomy tests
 
 ---
+
+## 📚 Tech Stack
+
+**Hardware:**  
+`Modified Wagon Frame` • `Custom Axle` • `350W Motor` • `3D LiDAR (360°x90°)` • `Mono Camera` • `Servo Steering`
+
+**Software & Compute:**  
+`NVIDIA Jetson Nano` • `ROS` • `SLAM` • `Python` • `C++`
+
+---
+
+## 💡 Project Goal
+
+To create a low-cost, sidewalk-compatible autonomous delivery robot platform inspired by real-world AVs. Aiming to utilize sidewalk infastracture for logistics (ie doordash, ubereats).
+
+---
+
 <a name="journal-log"></a>
 ## Journal Log
 
@@ -125,22 +142,7 @@ Currently facing challenges in designing and printing parts for a stable and pre
 </div>
   Mounting the servo to the fixed chassis and connecting it to the steering arm via a push-pull linkage (drag link).  
   - *Goal:* Achieve better mechanical control, increase range of motion, and keep the servo stationary for consistent torque application.
----
-
-## 📚 Tech Stack
-
-**Hardware:**  
-`Modified Wagon Frame` • `Custom Axle` • `350W Motor` • `3D LiDAR (360°x90°)` • `Mono Camera` • `Servo Steering`
-
-**Software & Compute:**  
-`NVIDIA Jetson Nano` • `ROS` • `SLAM` • `Python` • `C++`
-
----
-
-## 💡 Project Goal
-
-To create a low-cost, sidewalk-compatible autonomous delivery robot platform inspired by real-world AVs. Aiming to utilize sidewalk infastracture for logistics (ie doordash, ubereats).
-
+  
 ---
 
 ## 🤝 Collaboration & Feedback
