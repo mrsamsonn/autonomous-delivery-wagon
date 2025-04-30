@@ -109,6 +109,7 @@ Currently facing challenges in designing and printing parts for a stable and pre
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Ackerman_Steering_Linkage.gif" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 </div>
+
 **Approaches Tried:**
 
 - **Direct rotational steering**: Mounted the servo directly on the pivoting axle assembly.  
