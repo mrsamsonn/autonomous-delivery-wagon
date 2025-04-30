@@ -55,7 +55,7 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 
 ---
 
-## 🖼️ Preview & Media
+## 🖼️ Media Journal
 
 <div align="center">
 
@@ -86,10 +86,33 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 
 </div>
 
-Coming soon:
-- 📸 Build progress photos  
-- 🧱 3D models and CAD renders of housing/mounts  
-- 🎥 Demo videos (manual and autonomous testing)
+<div align="center">
+
+### 🛞 status as of 04/30/25 [steering mechanism void 🥲]
+
+<img src="https://github.com/user-attachments/assets/de53d2b0-0ec8-4076-bccc-81c74bc827a3" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/e0bf1dd3-6656-43e6-9261-c58087abfb40" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+**Steering Mechanism Development Log**
+
+Currently facing challenges in designing and printing parts for a stable and precise steering mechanism.
+
+**Approaches Tried:**
+
+- **Direct rotational steering**: Mounted the servo directly on the pivoting axle assembly.  
+  - *Issue:* The servo moved with the steering assembly, causing instability and limiting the range of motion.
+
+- **Lever-actuated steering using PVC arms**: Connected the servo to the wagon’s front axle with makeshift linkages.  
+  - *Issue:* This setup lacked precision and mechanical robustness.
+
+- **Current approach – Drag link steering**:  
+  Mounting the servo to the fixed chassis and connecting it to the steering arm via a push-pull linkage (drag link).  
+  - *Goal:* Achieve better mechanical control, increase range of motion, and keep the servo stationary for consistent torque application.
+
+</div>
+
+<div align="center">
 
 ---
 
