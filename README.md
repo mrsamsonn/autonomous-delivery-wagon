@@ -77,8 +77,8 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 ### 🛞 status as of 05/02/25 [servo twitching... 🫠]
 
-<img src="https://github.com/user-attachments/assets/3905f02f-3a43-430e-ba00-e8b5c77b6a39" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/9b259b2c-94a5-421b-a105-b4f7a628561e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/3905f02f-3a43-430e-ba00-e8b5c77b6a39" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;" loop=infinite>
+<img src="https://github.com/user-attachments/assets/9b259b2c-94a5-421b-a105-b4f7a628561e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;" loop=infinite>
 </div>
 
 Steering mech solved!! but currently experiencing **servo twitching**, both with and without mechanical load.  
