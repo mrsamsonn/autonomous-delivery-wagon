@@ -142,7 +142,34 @@ Currently facing challenges in designing and printing parts for a stable and pre
 </div>
   Mounting the servo to the fixed chassis and connecting it to the steering arm via a push-pull linkage (drag link).  
   - *Goal:* Achieve better mechanical control, increase range of motion, and keep the servo stationary for consistent torque application.
-  
+
+<div align="center">
+
+### 🛞 status as of 05/02/25 [servo twitching... 🫠]
+
+<img src="https://github.com/user-attachments/assets/3905f02f-3a43-430e-ba00-e8b5c77b6a39" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/9b259b2c-94a5-421b-a105-b4f7a628561e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+</div>
+
+Currently experiencing **servo twitching**, both with and without mechanical load.  
+I'm in the process of debugging whether this is due to:
+
+- A faulty servo, or  
+- An unstable PWM signal from the Jetson.
+
+As part of my wiring setup:
+
+- The servo's built-in 22 AWG wires were extended.
+  - **Signal wire** extended using the same 22 AWG.
+  - **VCC and GND wires** extended with 14 AWG (since I ran out of 22 AWG and wanted to safely support 12V current).
+- A **5A inline fuse** was added to the VCC line to prevent overcurrent, especially in stall conditions.
+
+**Hypothesis:**  
+
+The twitching might be caused by electrical noise from the AWG mismatch (22→14), particularly at the soldered joints.  
+Next step: testing with consistent wire gauges and checking the PWM signal stability.
+
+
 ---
 
 ## 🤝 Collaboration & Feedback
