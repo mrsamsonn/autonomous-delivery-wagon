@@ -43,14 +43,15 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 
 ## 📅 Development Roadmap
 
-> **Current Phase:** Mechanical Build & Manual Control Setup
+> **Current Phase:** Finalizing steering for precise movement  
+> **Upcoming Phase:** LiDAR Point Cloud and Mono Camera RGB data fusion
 
 - ✅ Modify base wagon and install axle/motor system  
 - ✅🔄 Integrate motor and servo components  
 - ✅ Mount 3D LiDAR and mono camera  
 - ✅ Building housing and electronics mount  
 - ✅ Manual control setup  
-- 🧪 Upcoming: SLAM data collection and initial autonomy tests
+- 🔄🧪 Upcoming: SLAM data collection and initial autonomy tests
 
 ---
 
