@@ -75,40 +75,29 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <div align="center">
 
-### 🛞 status as of 04/03/25
+### 🛞 status as of 05/02/25 [servo twitching... 🫠]
 
-<img src="https://github.com/user-attachments/assets/5736a210-2ebe-4cfc-a97d-3ada6ad23fc3" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/920bb215-e0b5-4365-a556-7b41b9e3cb0b" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-
+<img src="https://github.com/user-attachments/assets/3905f02f-3a43-430e-ba00-e8b5c77b6a39" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/9b259b2c-94a5-421b-a105-b4f7a628561e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 </div>
 
-<div align="center">
+Steering mech solved!! but currently experiencing **servo twitching**, both with and without mechanical load.  
+I'm in the process of debugging whether this is due to:
 
-### 🛞 status as of 04/15/25
+- A faulty servo, or  
+- An unstable PWM signal from the Jetson.
 
-<img src="https://github.com/user-attachments/assets/fd757812-911e-4f8b-9586-a58fbf3eb619" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/3ded7747-cda9-48ec-ae2c-38e01035e94e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/7e5cdcd7-3e42-47d1-afb0-779342addc7d" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/56103127-4d8a-4e87-9d79-0a71c5460200" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+As part of my wiring setup:
 
-</div>
+- The servo's built-in 22 AWG wires were extended.
+  - **Signal wire** extended using the same 22 AWG.
+  - **VCC and GND wires** extended with 14 AWG (since I ran out of 22 AWG and wanted to safely support 12V current).
+- A **5A inline fuse** was added to the VCC line to prevent overcurrent, especially in stall conditions.
 
-<div align="center">
+**Hypothesis:**  
 
-### 🛞 status as of 04/17/25
-
-<img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-
-</div>
-
-<div align="center">
-
-### 🛞 status as of 04/25/25
-
-<img src="https://github.com/user-attachments/assets/a125ad9d-e70a-41b4-950b-f0db18e28c48" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-
-</div>
+The twitching might be caused by electrical noise from the AWG mismatch (22→14), particularly at the soldered joints.  
+Next step: testing with consistent wire gauges and checking the PWM signal stability.
 
 <div align="center">
 
@@ -123,6 +112,7 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 **Steering Mechanism Development Log**
 
 Currently facing challenges in designing and printing parts for a stable and precise steering mechanism.
+
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Ackerman_Steering_Linkage.gif" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 </div>
@@ -145,29 +135,40 @@ Currently facing challenges in designing and printing parts for a stable and pre
 
 <div align="center">
 
-### 🛞 status as of 05/02/25 [servo twitching... 🫠]
+### 🛞 status as of 04/25/25
 
-<img src="https://github.com/user-attachments/assets/3905f02f-3a43-430e-ba00-e8b5c77b6a39" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-<img src="https://github.com/user-attachments/assets/9b259b2c-94a5-421b-a105-b4f7a628561e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/a125ad9d-e70a-41b4-950b-f0db18e28c48" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
 </div>
 
-Currently experiencing **servo twitching**, both with and without mechanical load.  
-I'm in the process of debugging whether this is due to:
+<div align="center">
 
-- A faulty servo, or  
-- An unstable PWM signal from the Jetson.
+### 🛞 status as of 04/17/25
 
-As part of my wiring setup:
+<img src="https://github.com/user-attachments/assets/3cb33db3-39e0-4885-9f0d-bc38f3951564" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/da425b6c-fe27-4f57-b305-9cecef449351" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 
-- The servo's built-in 22 AWG wires were extended.
-  - **Signal wire** extended using the same 22 AWG.
-  - **VCC and GND wires** extended with 14 AWG (since I ran out of 22 AWG and wanted to safely support 12V current).
-- A **5A inline fuse** was added to the VCC line to prevent overcurrent, especially in stall conditions.
+</div>
 
-**Hypothesis:**  
+<div align="center">
 
-The twitching might be caused by electrical noise from the AWG mismatch (22→14), particularly at the soldered joints.  
-Next step: testing with consistent wire gauges and checking the PWM signal stability.
+### 🛞 status as of 04/15/25
+
+<img src="https://github.com/user-attachments/assets/fd757812-911e-4f8b-9586-a58fbf3eb619" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/3ded7747-cda9-48ec-ae2c-38e01035e94e" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/7e5cdcd7-3e42-47d1-afb0-779342addc7d" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/56103127-4d8a-4e87-9d79-0a71c5460200" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+</div>
+
+<div align="center">
+
+### 🛞 status as of 04/03/25
+
+<img src="https://github.com/user-attachments/assets/5736a210-2ebe-4cfc-a97d-3ada6ad23fc3" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/920bb215-e0b5-4365-a556-7b41b9e3cb0b" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+</div>
 
 
 ---
