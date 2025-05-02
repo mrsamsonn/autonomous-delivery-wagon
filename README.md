@@ -83,23 +83,28 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 </div>
 
-Steering mech solved!! but currently experiencing **servo twitching**, both with and without mechanical load.  
-I'm in the process of debugging whether this is due to:
+> ### Problem:
+> Steering mech solved!! But currently experiencing **servo twitching**, both with and without mechanical load.  
+> After investigation, the issue appears to stem from **voltage instability** in the power supply.
+>
+> ### Findings:
+> - **24V to 12V Buck Converter Instability:**
+>     - When the servo is enabled, the voltage fluctuates between **12.05V to 12.35V**.
+>     - When the servo is disabled, the voltage remains stable at **12.26V**.
+>
+> ### Wiring Setup:
+> - The servo's built-in 22 AWG wires were extended:
+>     - **Signal wire** extended using the same 22 AWG.
+>     - **VCC and GND wires** extended with **14 AWG** to safely support 12V current.
+> - A **5A inline fuse** was added to the VCC line to prevent overcurrent during stall conditions.
+>
+> ### Hypothesis:
+> The **voltage fluctuations** might be due to instability in the power supply when the servo is active, which could be affecting the PWM signal and causing the servo twitching.
+>
+> ### Next Steps:
+> 1. Test a more stable **12V power source**.
+> 2. Consider adding **filtering** to the existing buck converter to smooth out the voltage fluctuations.
 
-- A faulty servo, or  
-- An unstable PWM signal from the Jetson.
-
-As part of my wiring setup:
-
-- The servo's built-in 22 AWG wires were extended.
-  - **Signal wire** extended using the same 22 AWG.
-  - **VCC and GND wires** extended with 14 AWG (since I ran out of 22 AWG and wanted to safely support 12V current).
-- A **5A inline fuse** was added to the VCC line to prevent overcurrent, especially in stall conditions.
-
-**Hypothesis:**  
-
-The twitching might be caused by electrical noise from the AWG mismatch (22→14), particularly at the soldered joints.  
-Next step: testing with consistent wire gauges and checking the PWM signal stability.
 
 <div align="center">
 
@@ -111,31 +116,34 @@ Next step: testing with consistent wire gauges and checking the PWM signal stabi
 
 </div>
 
-**Steering Mechanism Development Log**
+> **Steering Mechanism Development Log**
+>
+> Currently facing challenges in designing and printing parts for a stable and precise steering mechanism.
+>
+> <div align="center">
+>   
+> <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Ackerman_Steering_Linkage.gif" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+> 
+> </div>
+>
+> **Approaches Tried:**
+>
+> - **Direct rotational steering**: Mounted the servo directly on the pivoting axle assembly.  
+>   - *Issue:* The servo moved with the steering assembly, causing instability and limiting the range of motion.
+>
+> - **Lever-actuated steering using PVC arms**: Connected the servo to the wagon’s front axle with makeshift linkages.  
+>   - *Issue:* This setup lacked precision and mechanical robustness.
+>
+> - **Current approach – Drag link steering**:
+> <div align="center">
+>   <img src="https://i.makeagif.com/media/11-25-2015/7iNiAo.gif" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;"><br>
+>   <em>Credits: Mekanizmalar</em>
+> </div>
+>
+> Mounting the servo to the fixed chassis and connecting it to the steering arm via a push-pull linkage (drag link).  
+> **Goal:** Achieve better mechanical control, increase range of motion, and keep the servo stationary for consistent torque application.
 
-Currently facing challenges in designing and printing parts for a stable and precise steering mechanism.
 
-<div align="center">
-  
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Ackerman_Steering_Linkage.gif" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-
-</div>
-
-**Approaches Tried:**
-
-- **Direct rotational steering**: Mounted the servo directly on the pivoting axle assembly.  
-  - *Issue:* The servo moved with the steering assembly, causing instability and limiting the range of motion.
-
-- **Lever-actuated steering using PVC arms**: Connected the servo to the wagon’s front axle with makeshift linkages.  
-  - *Issue:* This setup lacked precision and mechanical robustness.
-
-- **Current approach – Drag link steering**:
-<div align="center">
-  <img src="https://i.makeagif.com/media/11-25-2015/7iNiAo.gif" height="200" alt="Axle Installed" style="border-radius: 8px; margin: 8px;"><br>
-  <em>Credits: Mekanizmalar</em>
-</div>
-  Mounting the servo to the fixed chassis and connecting it to the steering arm via a push-pull linkage (drag link).  
-  - *Goal:* Achieve better mechanical control, increase range of motion, and keep the servo stationary for consistent torque application.
 
 <div align="center">
 
