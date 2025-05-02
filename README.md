@@ -84,26 +84,31 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 </div>
 
 > ### Problem:
-> Steering mech solved!! But currently experiencing **servo twitching**, both with and without mechanical load.  
-> After investigation, the issue appears to stem from **voltage instability** in the power supply.
+> Steering mech is resolved!! but currently experiencing **servo twitching**, even with no mechanical load.
+> After investigation, the issue appears to stem from the **PWM signal quality** from Jetson Nano **pin 32**.
 >
-> ### Findings:
-> - **24V to 12V Buck Converter Instability:**
->     - When the servo is enabled, the voltage fluctuates between **12.05V to 12.35V**.
->     - When the servo is disabled, the voltage remains stable at **12.26V**.
+> ### New Findings:
+> - **PWM Signal from Jetson Pin 32 (GPIO12)** appears to be a **sine-like waveform**, not a proper square wave.
+>   - Observed via oscilloscope: signal is unstable and inconsistent, likely due to **software-based PWM emulation**.
+> - In contrast, a PWM signal from a **PCA9685** (driven through I²C from the Jetson) is a **clean square wave**.
+> - Jetson **GND is confirmed stable**, as it was used during both tests (pin 32 vs PCA).
 >
-> ### Wiring Setup:
-> - The servo's built-in 22 AWG wires were extended:
->     - **Signal wire** extended using the same 22 AWG.
->     - **VCC and GND wires** extended with **14 AWG** to safely support 12V current.
-> - A **5A inline fuse** was added to the VCC line to prevent overcurrent during stall conditions.
+> | **Pin 32 PWM Signal (Sine-Like)** | **PCA9685 PWM Signal (Clean Square Wave)** |
+> |----------------------------------|--------------------------------------------|
+> | <div align="center"><img src="https://github.com/user-attachments/assets/4fb8baaa-6029-4ac7-96e2-d1183602f44a" width="40%" alt="Pin 32 PWM Signal (Sine-Like)"></div> | <div align="center"><img src="https://github.com/user-attachments/assets/45d616bc-8a02-4154-983d-07bce63dac7a" width="40%" alt="PCA9685 PWM Signal (Clean Square Wave)"></div> |
+
+> ### Constraint:
+> - Only one PCA9685 is available and is currently used for controlling a **brushed motor**, which runs at a different PWM frequency.
+> - Jetson Nano provides only **one physical SDA/SCL pair**, limiting direct support for multiple PCA9685 boards without hardware modifications.
 >
 > ### Hypothesis:
-> The **voltage fluctuations** might be due to instability in the power supply when the servo is active, which could be affecting the PWM signal and causing the servo twitching.
+> The **servo twitching** is likely caused by the poor PWM signal quality from pin 32, not wiring or voltage instability.
 >
 > ### Next Steps:
-> 1. Test a more stable **12V power source**.
-> 2. Consider adding **filtering** to the existing buck converter to smooth out the voltage fluctuations.
+> 1. Test **pin 33 (GPIO13)** — a Jetson-supported PWM-capable pin that might provide a cleaner signal if properly configured through Jetson-IO.
+> 2. Explore using an **I²C multiplexer (e.g., TCA9548A)** or **software I²C** to add a second PCA9685 board.
+> 3. Investigate options to **clean the signal** from pin 32 using a low-pass filter or buffer (if switching pins isn't viable).
+> 4. Collect and share **oscilloscope screenshots** comparing pin 32 vs PCA outputs for further debugging and validation.
 
 
 <div align="center">
