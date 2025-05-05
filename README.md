@@ -17,6 +17,14 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 
 ---
 
+## Block Diagram
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d70e94a4-fe8c-4e85-abc2-ccd86ea6fdd3" height="800" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+</div>
+
+---
+
 ## ⚙️ Key Features
 
 - **Modified Commercial Wagon Base**  
