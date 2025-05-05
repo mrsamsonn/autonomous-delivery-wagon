@@ -84,6 +84,20 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <div align="center">
 
+### 🛞 status as of 05/04/25 [servo and motor signal is clean 👌]
+
+<img src="https://github.com/user-attachments/assets/6bf40b2c-2f75-41ca-8bc2-02ae8ed90ade" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/f0dac9a8-c436-4a44-952d-08deda842d50" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+
+</div>
+
+> ### Solution:
+> - Found out SDA and SCL can be enabled through device tree for Jetson Nano Pin 27/28
+> - used another PCA PWM controller for servo - resulted to cleaner signals and eliminated twitching
+> - but this solution met by another issue, Jetson only has two 5V pins (was being used by motor driver and pca_1) - see block diagram above for new wiring as solution
+
+<div align="center">
+
 ### 🛞 status as of 05/02/25 [servo twitching... 🫠]
 
 <img src="https://github.com/user-attachments/assets/963cd42a-231f-4b8f-b305-01be0b807ab1" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
