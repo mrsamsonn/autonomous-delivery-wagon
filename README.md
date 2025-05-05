@@ -88,6 +88,7 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <img src="https://github.com/user-attachments/assets/6bf40b2c-2f75-41ca-8bc2-02ae8ed90ade" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/f0dac9a8-c436-4a44-952d-08deda842d50" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/562e9e33-1cb3-4e0b-91d4-7e0ea3d36fa7" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 
 </div>
 
