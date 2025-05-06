@@ -20,7 +20,7 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 ## Block Diagram
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/d70e94a4-fe8c-4e85-abc2-ccd86ea6fdd3" height="800" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/4e98f73e-0526-405e-aa60-4e68b270b7c8" height="800" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 </div>
 
 ---
