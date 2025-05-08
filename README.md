@@ -89,7 +89,6 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 new problem!!!! what's an engineering project that doesn't have issues right? 🫠
 
-<img src="https://github.com/user-attachments/assets/fc1cb5f0-4a8b-4662-bfd8-59cbaf730b44" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/9c6d3f0e-6a89-48a4-b5ad-be37fbfe8ab4" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/19c3eeaa-0fb6-43df-8094-cbc6898e7779" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/f7281591-82ca-4861-a015-9fb2b756c36c" height="300" alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
