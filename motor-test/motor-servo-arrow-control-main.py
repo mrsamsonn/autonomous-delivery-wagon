@@ -2,6 +2,7 @@ import os
 import time
 import curses
 import busio
+import math
 from board import SCL, SDA
 from adafruit_pca9685 import PCA9685
 
@@ -28,11 +29,20 @@ PWM_BASE = "/sys/devices/7000a000.pwm/pwm/pwmchip0"
 PWM0_PATH = os.path.join(PWM_BASE, "pwm0")
 
 PERIOD_NS = 20000000
-CENTER_NS = 1600000
-RANGE_US = 400
+# Adjustable center pulse width (in nanoseconds)
+CENTER_NS = 1600000  # Default center (you can tweak this)
 
+# Range to stay away from hard limits (in microseconds)
+RANGE_US = 600  # ±300 μs → 1200–2000 μs
+
+#range: 500–2500μs
+
+# Calculate left/right relative to center
 LEFT_NS  = CENTER_NS - (RANGE_US * 1000) // 2
 RIGHT_NS = CENTER_NS + (RANGE_US * 1000) // 2
+
+print(LEFT_NS)
+print(RIGHT_NS)
 
 def export_pwm(channel):
     try:
@@ -50,20 +60,49 @@ def set_pwm(path, period, duty, enable):
     with open(os.path.join(path, "enable"), "w") as f:
         f.write(str(enable))
 
+def smooth_move(target_ns, max_steps=200, delay=0.01):
+    """Smooth and continuous servo movement."""
+    current_ns = get_current_pwm_value()
+    current_ns = max(1000000, min(current_ns, 2000000))  # stay in safe range
+
+    distance = abs(target_ns - current_ns)
+    steps = min(max_steps, int(distance / 5))  # more steps for bigger moves
+
+    for i in range(1, steps + 1):
+        t = i / steps
+        # Cosine easing
+        eased_t = 0.5 * (1 - math.cos(math.pi * t))
+        interp_ns = current_ns + (target_ns - current_ns) * eased_t
+        set_pwm(PWM0_PATH, PERIOD_NS, int(interp_ns), 1)
+        time.sleep(delay)
+
+    set_pwm(PWM0_PATH, PERIOD_NS, target_ns, 1)
+    set_current_pwm_value(target_ns)
+
+# You need to maintain current PWM value globally
+current_pwm_value = CENTER_NS
+
+def get_current_pwm_value():
+    global current_pwm_value
+    return current_pwm_value
+
+def set_current_pwm_value(value):
+    global current_pwm_value
+    current_pwm_value = value
+
 def move_left():
-    set_pwm(PWM0_PATH, PERIOD_NS, LEFT_NS, 1)
+    smooth_move(LEFT_NS)
 
 def move_right():
-    set_pwm(PWM0_PATH, PERIOD_NS, RIGHT_NS, 1)
+    smooth_move(RIGHT_NS)
 
 def center_servo():
-    set_pwm(PWM0_PATH, PERIOD_NS, CENTER_NS, 1)
+    smooth_move(CENTER_NS)
 
 def stop_servo():
-    # Properly center the servo before disabling
-    set_pwm(PWM0_PATH, PERIOD_NS, CENTER_NS, 0)  # Center the servo
-    time.sleep(0.1)  # Allow time for it to settle before disabling
-    set_pwm(PWM0_PATH, PERIOD_NS, CENTER_NS, 0)  # Ensure it stays centered
+    smooth_move(CENTER_NS)
+    time.sleep(0.1)
+    set_pwm(PWM0_PATH, PERIOD_NS, CENTER_NS, 0)
 
 ### --- Combined Main Control --- ###
 def main(stdscr):

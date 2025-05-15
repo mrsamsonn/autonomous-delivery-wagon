@@ -12,7 +12,9 @@ PERIOD_NS = 20000000  # 20ms = 50Hz
 CENTER_NS = 1600000  # Default center (you can tweak this)
 
 # Range to stay away from hard limits (in microseconds)
-RANGE_US = 400  # Gives 1100–1900μs, safely away from 500–2500μs
+RANGE_US = 800  # ±400 μs → 1200–2000 μs
+
+#range: 500–2500μs
 
 # Calculate left/right relative to center
 LEFT_NS  = CENTER_NS - (RANGE_US * 1000) // 2
