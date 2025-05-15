@@ -1,0 +1,16 @@
+<launch>
+
+  <!-- Optional: RViz -->
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find unitree_lidar_ros)/rviz/view.rviz" /> -->
+
+  <!-- Start the LiDAR node -->
+  <node pkg="unitree_lidar_ros" type="unitree_lidar_ros_node"  name="unitree_lidar_ros_node" respawn="true">
+    <rosparam command="load" file="$(find unitree_lidar_ros)/config/config.yaml"/>
+  </node>
+
+  <!-- Static transform to flip Z-axis -->
+  <node pkg="tf" type="static_transform_publisher" name="lidar_flip_tf"
+      args="0 0 0 0 3.1416 0 map unilidar_lidar 100" />
+
+</launch>
+
