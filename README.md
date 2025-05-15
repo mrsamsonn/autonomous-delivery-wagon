@@ -5,7 +5,7 @@ A sidewalk-friendly autonomous delivery robot designed for scalable logistics.
 <div align="center">
   <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/a125ad9d-e70a-41b4-950b-f0db18e28c48" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-  <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/4aed4f77-db0d-4e59-9824-70d2afeae18d" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/fc1cb5f0-4a8b-4662-bfd8-59cbaf730b44" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <p><a href="#journal-log"> Scroll down for journal logs 📓😊!</a></p>
 </div>
@@ -85,6 +85,13 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <div align="center">
 
+### 🛞 status as of 05/15/25 [init ros launch script 💻]
+
+<img src="https://github.com/user-attachments/assets/4aed4f77-db0d-4e59-9824-70d2afeae18d" height="300" style="border-radius: 8px; margin: 8px;">
+</div>
+
+<div align="center">
+
 ### 🛞 status as of 05/08/25 [responsive steering, but wheel alignment issue? 🛞⚙️]
 
 new problem!!!! what's an engineering project that doesn't have issues right? 🫠
@@ -99,7 +106,7 @@ new problem!!!! what's an engineering project that doesn't have issues right? �
 > ### Issue:
 > - forward-right seems to be sliding
 > ### Investigation:
-> - noticed left right wheel has less grip compare to right wheel
+> - noticed left wheel has less grip compare to right wheel
 >   - further investigation shows that right wheel is slightly floating
 > - noticed wagon chassis is sagging more to left side
 >   - resulting to a lower left wheel and higher right wheel
