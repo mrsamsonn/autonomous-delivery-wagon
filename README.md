@@ -85,7 +85,7 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <div align="center">
 
-### 🛞 status as of 05/14/25 [init ros launch script 💻]
+### 🛞 status as of 05/15/25 [init ros launch script 💻]
 
 <img src="https://github.com/user-attachments/assets/4aed4f77-db0d-4e59-9824-70d2afeae18d" height="300" style="border-radius: 8px; margin: 8px;">
 </div>
