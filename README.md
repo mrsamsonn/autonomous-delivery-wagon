@@ -5,7 +5,7 @@ A sidewalk-friendly autonomous delivery robot designed for scalable logistics.
 <div align="center">
   <img src="https://github.com/user-attachments/assets/429021f5-e294-4863-8b56-89cd9b16ff1b" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/a125ad9d-e70a-41b4-950b-f0db18e28c48" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
-  <img src="https://github.com/user-attachments/assets/4a7f62c9-dc78-49ad-9218-2073750102c7" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/4aed4f77-db0d-4e59-9824-70d2afeae18d" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <img src="https://github.com/user-attachments/assets/fc1cb5f0-4a8b-4662-bfd8-59cbaf730b44" height="200" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
   <p><a href="#journal-log"> Scroll down for journal logs 📓😊!</a></p>
 </div>
@@ -82,6 +82,13 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <a name="journal-log"></a>
 ## Journal Log
+
+<div align="center">
+
+### 🛞 status as of 05/14/25 [init ros launch script 💻]
+
+<img src="https://github.com/user-attachments/assets/4aed4f77-db0d-4e59-9824-70d2afeae18d" height="300" style="border-radius: 8px; margin: 8px;">
+</div>
 
 <div align="center">
 
