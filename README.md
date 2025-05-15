@@ -106,7 +106,7 @@ new problem!!!! what's an engineering project that doesn't have issues right? ðŸ
 > ### Issue:
 > - forward-right seems to be sliding
 > ### Investigation:
-> - noticed left right wheel has less grip compare to right wheel
+> - noticed left wheel has less grip compare to right wheel
 >   - further investigation shows that right wheel is slightly floating
 > - noticed wagon chassis is sagging more to left side
 >   - resulting to a lower left wheel and higher right wheel
