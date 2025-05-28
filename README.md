@@ -21,7 +21,7 @@ tldr; designing an autonomous bot for local food delivery (ie. doordash, ubereat
 ## Block Diagram
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4e98f73e-0526-405e-aa60-4e68b270b7c8" height="800" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
+  <img src="https://github.com/user-attachments/assets/c547dc70-7368-4a45-a3be-53c8a1ecb9d7" height="800" width: auto alt="Axle Installed" style="border-radius: 8px; margin: 8px;">
 </div>
 
 ---
@@ -89,12 +89,13 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <img src="https://github.com/user-attachments/assets/11a483e6-82a9-4941-8cb0-a7d7e647224b" height="300" style="border-radius: 8px; margin: 8px;">
 <img src="https://github.com/user-attachments/assets/ccc8ce06-2376-44e5-888b-34ee914f9b46" height="300" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/aa12d575-72c4-4e7a-9c1a-318ce49872ea" height="300" style="border-radius: 8px; margin: 8px;">
 
 </div>
 
 > ### Issue:
 > - kept blowing even under low current
-> - has inline fuse of 3A and board still blew at quick stall
+> - has inline fuse of 5A and board still blew at quick stall, brought inline fuse down to 3A, still blew the board
 > - context, this is the second servo that blew up despite having inline fuse below rated stall current: "Stall current at locked ( 12.6V ): 8.3A"
 > - should have listened to amazon 'frequently returned' warning 😅
 
