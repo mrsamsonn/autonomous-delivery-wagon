@@ -88,12 +88,15 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 ### 🛞 status as of 05/28/25 [current servo not reliable 🤦‍♂️, attempting to replace with  RS380 12V steering motor ⚙️]
 
 <img src="https://github.com/user-attachments/assets/11a483e6-82a9-4941-8cb0-a7d7e647224b" height="300" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/ccc8ce06-2376-44e5-888b-34ee914f9b46" height="300" style="border-radius: 8px; margin: 8px;">
 
 </div>
 
 > ### Issue:
 > - kept blowing even under low current
 > - has inline fuse of 3A and board still blew at quick stall
+> - context, this is the second servo that blew up despite having inline fuse below rated stall current: "Stall current at locked ( 12.6V ): 8.3A"
+> - should have listened to amazon 'frequently returned' warning 😅
 
 > ### Will attempt to use RS380 12V steering motor typically used for kids electric car
 > - designed and printed new holder
