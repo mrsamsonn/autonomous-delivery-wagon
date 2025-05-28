@@ -85,6 +85,31 @@ To create a low-cost, sidewalk-compatible autonomous delivery robot platform ins
 
 <div align="center">
 
+### 🛞 status as of 05/28/25 [current servo not reliable 🤦‍♂️, attempting to replace with  RS380 12V steering motor ⚙️]
+
+<img src="https://github.com/user-attachments/assets/11a483e6-82a9-4941-8cb0-a7d7e647224b" height="300" style="border-radius: 8px; margin: 8px;">
+
+</div>
+
+> ### Issue:
+> - kept blowing even under low current
+> - has inline fuse of 3A and board still blew at quick stall
+
+> ### Will attempt to use RS380 12V steering motor typically used for kids electric car
+> - designed and printed new holder
+> - but currently experiencing tensions at specific areas due to minor measurement issues +/-1mm
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/d09cb31c-2f07-4522-883c-f5982b3720c1" height="300" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/6bceec33-a5c4-42c6-a3bf-e8462d014b1b" height="300" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/031d3b27-174c-4982-b2de-9c1ff212fad2" height="300" style="border-radius: 8px; margin: 8px;">
+<img src="https://github.com/user-attachments/assets/abcbcabf-965c-4654-a1bf-a9089d7829ec" height="300" style="border-radius: 8px; margin: 8px;">
+
+</div>
+
+<div align="center">
+
 ### 🛞 status as of 05/15/25 [init ros launch script 💻]
 
 <img src="https://github.com/user-attachments/assets/4aed4f77-db0d-4e59-9824-70d2afeae18d" height="300" style="border-radius: 8px; margin: 8px;">
